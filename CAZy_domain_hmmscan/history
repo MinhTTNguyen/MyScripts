@@ -1,0 +1,18 @@
+============================
+Tuesday, September 3rd 2019
+============================
+
+- combine in-house HMMs and those from dbCANv6 and PFAM (CBM10)
+
+mnguyen@biocompute1:/mnt/data/home/mnguyen/MyScripts/CAZy_domain_hmmscan$ hmmconvert dbCAN_HMMs_v6_noGH74_noCBM10_noCE1.txt > dbCAN_HMMs_v6_noGH74_noCBM10_noCE1_hmmconverted.txt
+(converted from version HMMER3/b [3.0 | March 2010] to version HMMER3/f [3.1b2 | February 2015])
+
+hmmconvert GH74_CE1_CSFG_CBM10PF_HMMs.txt > GH74_CE1_CSFG_CBM10PF_HMMs_hmmconverted.txt
+(converted from version HMMER3/f [3.1b1 | May 2013] to version HMMER3/f [3.1b2 | February 2015])
+
+
+cat dbCAN_HMMs_v6_noGH74_noCBM10_noCE1_hmmconverted.txt GH74_CE1_CSFG_CBM10PF_HMMs_hmmconverted.txt > dbCANv6_CSFGGH74_CE1_PFAMCBM10.txt
+
+hmmpress dbCANv6_CSFGGH74_CE1_PFAMCBM10.txt
+
+

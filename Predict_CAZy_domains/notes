@@ -1,0 +1,20 @@
+###############
+June 17th 2019
+##############
+
+
+======================================================
+CHANGE IN SCRIPT step1_read_hmmscan_dbCAN_cutoff.pl
+======================================================
+
+First line in the output from the script "step1_read_hmmscan_dbCAN_cutoff.pl" SHOULD NOT HAVE '#' at the beginning:
+#Seq_id CAZy_family     Evalue  HMM_fraction    HMM_from        HMM_to  HMM_len Domain_from     Domain_to       Seq_len
+
+because when input this output file into R, this line is not regconized as the header.
+
+Hence, I changed the script so that the first line in the output file is:
+Seq_id CAZy_family     Evalue  HMM_fraction    HMM_from        HMM_to  HMM_len Domain_from     Domain_to       Seq_len
+
+
+For previous CaZyme prediction work, there should be no problem from the above issue since the scripts in step3 (combining results from dbCAN'HMMs and in-house HMMs) removed the '#' in the first line in the output files
+
