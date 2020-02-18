@@ -49,7 +49,7 @@ foreach my $file_gff (@files_gff)
 		my $species="";
 		foreach my $each_species (@all_species)
 		{
-			if ($file_gff=~/$each_species/){$species=$each_species;last;} # caution: in case there are 2 files: Pycco1662_1_GeneCatalog_genes_20140607.gff and Pycco1_GeneCatalog_genes_20140114.gff, either of them can be selected and could cause wrong result
+			if ($file_gff=~/$each_species/){$species=$each_species;last;}
 		}
 		if ($hash_species_protids{$species})
 		{
